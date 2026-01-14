@@ -17,7 +17,6 @@ const scrollToSection = (id: string) => {
   }
 }
 
-// Mapped from Resume Skills
 const skills = ref([
   'Java',
   'Kotlin',
@@ -46,7 +45,7 @@ const projects = ref([
     description:
       'High Distinction university project. A photo gallery app with web search (Pixlr API) and cloud storage. Garnered 1k+ downloads on Google Play.',
     tech: ['Kotlin', 'Android SDK', 'Firebase'],
-    link: 'https://github.com/cmarteli', // Linking to GitHub profile as specific repo link wasn't provided
+    link: 'https://github.com/cmarteli', // TODO; Add repo link
   },
   {
     title: '.NET Chat Application',
@@ -67,7 +66,6 @@ const projects = ref([
 const socialLinks = ref([
   { name: 'GitHub', url: 'https://github.com/cmarteli' },
   { name: 'LinkedIn', url: 'https://linkedin.com/in/cmarteli' },
-  { name: 'Portfolio', url: 'https://cmarteli.github.io' },
   { name: 'Email', url: 'mailto:caio.marteli@proton.me' },
 ])
 
@@ -207,7 +205,6 @@ onMounted(() => {
   --nav-height: 70px;
 }
 
-/* Ensure the component takes standard resets if global css is missing */
 * {
   box-sizing: border-box;
 }
@@ -225,7 +222,7 @@ onMounted(() => {
     'Open Sans',
     'Helvetica Neue',
     sans-serif;
-  background-color: #0f172a; /* Hardcoded fallback for var */
+  background-color: #0f172a;
   color: #e2e8f0;
   min-height: 100vh;
   line-height: 1.6;
