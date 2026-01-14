@@ -1,71 +1,88 @@
 <script setup lang="ts">
-import { ref, onMounted } from 'vue';
+import { ref, onMounted } from 'vue'
 
 // --- Data ---
 
-const navOpen = ref(false);
+const navOpen = ref(false)
 
 const toggleNav = () => {
-  navOpen.value = !navOpen.value;
-};
+  navOpen.value = !navOpen.value
+}
 
 const scrollToSection = (id: string) => {
-  navOpen.value = false; // close menu on mobile
-  const element = document.getElementById(id);
+  navOpen.value = false // close menu on mobile
+  const element = document.getElementById(id)
   if (element) {
-    element.scrollIntoView({ behavior: 'smooth' });
+    element.scrollIntoView({ behavior: 'smooth' })
   }
-};
+}
 
+// Mapped from Resume Skills
 const skills = ref([
-  'JavaScript / TypeScript', 'Vue.js 3', 'Node.js', 'Python',
-  'Docker', 'AWS', 'PostgreSQL', 'GraphQL', 'Git / CI/CD'
-]);
+  'Java',
+  'Kotlin',
+  'C#',
+  'Python',
+  'JavaScript / TypeScript',
+  'Angular',
+  'Node.js',
+  'Azure DevOps',
+  'Docker',
+  '.NET Core',
+  'SQL',
+])
 
+// Mapped from Resume Projects
 const projects = ref([
   {
-    title: 'Cloud Dashboard',
-    description: 'A real-time analytics dashboard for cloud infrastructure monitoring.',
-    tech: ['Vue 3', 'D3.js', 'AWS Lambda'],
-    link: '#'
+    title: 'IMDEX Design Token System',
+    description:
+      'Internship project involving the design and creation of a design token system seamlessly integrated with Figma. Led an Agile team and managed stakeholder reporting.',
+    tech: ['Angular', 'Express JS', 'Azure DevOps'],
+    link: '#',
   },
   {
-    title: 'E-Commerce API',
-    description: 'Scalable RESTful API handling 10k+ requests/second.',
-    tech: ['Node.js', 'Express', 'Redis', 'Docker'],
-    link: '#'
+    title: 'Android Photo Gallery',
+    description:
+      'High Distinction university project. A photo gallery app with web search (Pixlr API) and cloud storage. Garnered 1k+ downloads on Google Play.',
+    tech: ['Kotlin', 'Android SDK', 'Firebase'],
+    link: 'https://github.com/cmarteli', // Linking to GitHub profile as specific repo link wasn't provided
   },
   {
-    title: 'Task Master',
-    description: 'Collaborative project management tool with live socket updates.',
-    tech: ['TypeScript', 'Socket.io', 'MongoDB'],
-    link: '#'
-  }
-]);
+    title: '.NET Chat Application',
+    description:
+      'A robust .NET Core chat application leveraging MVC architecture and RESTful API. Focused on code quality and maintainability.',
+    tech: ['C#', '.NET Core', 'REST API'],
+    link: 'https://github.com/cmarteli',
+  },
+  {
+    title: 'MaberseBot',
+    description:
+      'Versatile Discord bot integrating various APIs for RNG dice rolls, weather forecasts, and entertainment.',
+    tech: ['Python', 'Flask', 'Discord API'],
+    link: 'https://github.com/cmarteli',
+  },
+])
 
 const socialLinks = ref([
-  { name: 'GitHub', url: '#' },
-  { name: 'LinkedIn', url: '#' },
-  { name: 'Twitter', url: '#' },
-  { name: 'Email', url: 'mailto:hello@example.com' }
-]);
+  { name: 'GitHub', url: 'https://github.com/cmarteli' },
+  { name: 'LinkedIn', url: 'https://linkedin.com/in/cmarteli' },
+  { name: 'Portfolio', url: 'https://cmarteli.github.io' },
+  { name: 'Email', url: 'mailto:caio.marteli@proton.me' },
+])
 
 // --- Lifecycle ---
 onMounted(() => {
-  // Optional: Add interaction observers or animations here
-  console.log('Portfolio mounted');
-});
+  console.log('Portfolio mounted')
+})
 </script>
 
 <template>
   <div class="app-container">
-    <!-- Navigation -->
     <header class="navbar">
       <div class="container nav-content">
-        <div class="logo" @click="scrollToSection('hero')">
-          &lt;DevPortfolio /&gt;
-        </div>
-        
+        <div class="logo" @click="scrollToSection('hero')">&lt;VMarteli /&gt;</div>
+
         <button class="mobile-toggle" @click="toggleNav" aria-label="Toggle navigation">
           <span class="bar"></span>
           <span class="bar"></span>
@@ -81,13 +98,13 @@ onMounted(() => {
       </div>
     </header>
 
-    <!-- Hero Section -->
     <section id="hero" class="hero-section">
       <div class="container hero-content">
-        <h1 class="animate-fade-up">Hi, I'm <span class="highlight">Victor</span>.</h1>
-        <h2 class="animate-fade-up delay-1">Full Stack Software Engineer.</h2>
+        <h1 class="animate-fade-up">Hi, I'm <span class="highlight">Victor Marteli</span>.</h1>
+        <h2 class="animate-fade-up delay-1">Software Engineer.</h2>
         <p class="animate-fade-up delay-2">
-          I build accessible, pixel-perfect, and performant web applications.
+          Results-driven developer with a solid foundation in Java, Kotlin, C#, and JavaScript. I
+          build hands-on innovative solutions for dynamic organizations.
         </p>
         <div class="cta-group animate-fade-up delay-3">
           <button class="btn primary" @click="scrollToSection('projects')">View Work</button>
@@ -96,31 +113,32 @@ onMounted(() => {
       </div>
     </section>
 
-    <!-- About Section -->
     <section id="about" class="section alternate-bg">
       <div class="container">
         <h2 class="section-title">About Me</h2>
         <div class="about-grid">
           <div class="about-text">
             <p>
-              I am a passionate developer based in Australia with a focus on creating efficient and scalable software solutions. 
-              With a background in Computer Science, I enjoy tackling complex problems and turning them into simple, beautiful interface designs.
+              I am a Software Engineer based in Western Australia with a Bachelor of Computing from
+              Curtin University. I have hands-on industry experience as a Full Stack Developer at
+              IMDEX Ltd, where I utilized Angular and Node.js to manage specialized hardware
+              inventory systems.
             </p>
             <p>
-              When I'm not coding, you can find me exploring the outdoors, reading sci-fi novels, or experimenting with new tech stacks.
+              My background includes volunteering as a student mentor and working in network
+              diagnostics at Aussie Broadband. I am fluent in English and Portuguese, and passionate
+              about applying my diverse skill set to challenging technical projects.
             </p>
           </div>
           <div class="about-visual">
-             <!-- CSS-only placeholder for profile image -->
             <div class="profile-placeholder">
-              <span>IMG</span>
+              <span>VM</span>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Skills Section -->
     <section id="skills" class="section">
       <div class="container">
         <h2 class="section-title">Technical Skills</h2>
@@ -132,7 +150,6 @@ onMounted(() => {
       </div>
     </section>
 
-    <!-- Projects Section -->
     <section id="projects" class="section alternate-bg">
       <div class="container">
         <h2 class="section-title">Featured Projects</h2>
@@ -149,18 +166,23 @@ onMounted(() => {
       </div>
     </section>
 
-    <!-- Contact Section -->
     <section id="contact" class="section">
       <div class="container contact-content">
         <h2 class="section-title">Get In Touch</h2>
         <p>
-          I'm currently looking for new opportunities. Whether you have a question or just want to say hi, 
-          I'll try my best to get back to you!
+          I'm currently looking for new opportunities in software engineering. Feel free to reach
+          out via email or connect on LinkedIn.
         </p>
-        <a href="mailto:hello@example.com" class="btn primary big-btn">Say Hello</a>
-        
+        <a href="mailto:caio.marteli@proton.me" class="btn primary big-btn">Say Hello</a>
+
         <div class="social-links">
-          <a v-for="link in socialLinks" :key="link.name" :href="link.url" class="social-link">
+          <a
+            v-for="link in socialLinks"
+            :key="link.name"
+            :href="link.url"
+            target="_blank"
+            class="social-link"
+          >
             {{ link.name }}
           </a>
         </div>
@@ -168,7 +190,7 @@ onMounted(() => {
     </section>
 
     <footer class="footer">
-      <p>&copy; {{ new Date().getFullYear() }} Victor Developer. Built with Vue 3.</p>
+      <p>&copy; {{ new Date().getFullYear() }} Victor Marteli. Built with Vue 3.</p>
     </footer>
   </div>
 </template>
@@ -191,7 +213,18 @@ onMounted(() => {
 }
 
 .app-container {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family:
+    'Inter',
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    'Open Sans',
+    'Helvetica Neue',
+    sans-serif;
   background-color: #0f172a; /* Hardcoded fallback for var */
   color: #e2e8f0;
   min-height: 100vh;
@@ -213,7 +246,7 @@ onMounted(() => {
   background-color: rgba(15, 23, 42, 0.9);
   backdrop-filter: blur(10px);
   z-index: 1000;
-  border-bottom: 1px solid rgba(255,255,255,0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .nav-content {
@@ -374,6 +407,7 @@ onMounted(() => {
   color: #94a3b8;
   font-weight: bold;
   position: relative;
+  font-size: 2rem;
 }
 
 .profile-placeholder::after {
@@ -416,7 +450,9 @@ onMounted(() => {
   padding: 2rem;
   border-radius: 8px;
   transition: transform 0.3s;
-  border: 1px solid rgba(255,255,255,0.05);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  flex-direction: column;
 }
 
 .project-card:hover {
@@ -432,6 +468,7 @@ onMounted(() => {
   color: #94a3b8;
   margin-bottom: 1.5rem;
   font-size: 0.95rem;
+  flex-grow: 1;
 }
 
 .tech-stack {
@@ -451,6 +488,7 @@ onMounted(() => {
   text-decoration: none;
   border-bottom: 1px solid transparent;
   transition: border-color 0.3s;
+  align-self: flex-start;
 }
 
 .project-link:hover {
@@ -471,6 +509,8 @@ onMounted(() => {
 .big-btn {
   padding: 1rem 2rem;
   font-size: 1.1rem;
+  text-decoration: none;
+  display: inline-block;
 }
 
 .social-links {
@@ -478,6 +518,7 @@ onMounted(() => {
   display: flex;
   justify-content: center;
   gap: 2rem;
+  flex-wrap: wrap;
 }
 
 .social-link {
@@ -504,9 +545,15 @@ onMounted(() => {
   transform: translateY(20px);
 }
 
-.delay-1 { animation-delay: 0.1s; }
-.delay-2 { animation-delay: 0.2s; }
-.delay-3 { animation-delay: 0.3s; }
+.delay-1 {
+  animation-delay: 0.1s;
+}
+.delay-2 {
+  animation-delay: 0.2s;
+}
+.delay-3 {
+  animation-delay: 0.3s;
+}
 
 @keyframes fadeUp {
   to {
@@ -517,13 +564,24 @@ onMounted(() => {
 
 /* --- Responsive --- */
 @media (max-width: 768px) {
-  .hero-content h1 { font-size: 2.5rem; }
-  .hero-content h2 { font-size: 1.5rem; }
-  .about-grid { grid-template-columns: 1fr; }
-  .profile-placeholder { width: 80%; margin: 0 auto; }
-  
-  .mobile-toggle { display: flex; }
-  
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+  .hero-content h2 {
+    font-size: 1.5rem;
+  }
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+  .profile-placeholder {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .mobile-toggle {
+    display: flex;
+  }
+
   .nav-links {
     position: fixed;
     top: 70px;
@@ -537,7 +595,7 @@ onMounted(() => {
     transform: translateX(100%);
     transition: transform 0.3s ease-in-out;
   }
-  
+
   .nav-active {
     transform: translateX(0);
   }
