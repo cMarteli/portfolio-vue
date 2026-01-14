@@ -50,14 +50,16 @@ defineProps({
   font-size: 2rem;
   margin-bottom: 3rem;
   position: relative;
-  display: inline-block;
+  display: block;
+  text-align: center;
 }
 
 .section-title::after {
   content: '';
   position: absolute;
   bottom: -10px;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
   width: 60px;
   height: 4px;
   background-color: #38bdf8;
