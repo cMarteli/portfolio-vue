@@ -13,7 +13,7 @@ const scrollToSection = (id: string) => {
       <h1 class="animate-fade-up">Hey, I'm <span class="highlight">Vic</span></h1>
       <h2 class="animate-fade-up delay-1">Software Engineer.</h2>
       <p class="animate-fade-up delay-2">
-        Results-driven developer with a solid foundation in Java, Kotlin, C#, and JavaScript. I
+        Results-driven developer with experience in .NET, React, Vue and Angular. I
         build hands-on innovative solutions for dynamic organisations.
       </p>
       <div class="cta-group animate-fade-up delay-3">
