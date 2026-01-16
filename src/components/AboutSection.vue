@@ -5,13 +5,10 @@
       <div class="about-grid">
         <div class="about-text">
           <p>
-            I am a Software Engineer currently working at Racing and Wagering Western Australia.
+            Fullstack developer based in Western Australia.
           </p>
           <p>
-            My background includes working in the mining industry as a Full Stack Developer at
-            IMDEX Ltd, where I utilised Angular and Node.js to manage specialised hardware
-            inventory systems. I am passionate
-            about applying my diverse skill set to challenging technical projects.
+            Leveraging 10+ years of background in the gaming and mining industries with a passion for technology to build robust software solutions.
           </p>
         </div>
         <div class="about-visual">

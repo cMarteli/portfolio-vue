@@ -27,7 +27,7 @@ defineProps({
           <div class="tech-stack">
             <span v-for="t in project.tech" :key="t">{{ t }}</span>
           </div>
-          <a :href="project.link" class="project-link">View Project &rarr;</a>
+          <a v-if="project.link" :href="project.link" class="project-link">View Project &rarr;</a>
         </div>
       </div>
     </div>

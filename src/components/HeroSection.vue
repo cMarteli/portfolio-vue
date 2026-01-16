@@ -10,7 +10,7 @@ const scrollToSection = (id: string) => {
 <template>
   <section id="hero" class="hero-section">
     <div class="container hero-content">
-      <h1 class="animate-fade-up">Hi, I'm <span class="highlight">Victor Marteli</span>.</h1>
+      <h1 class="animate-fade-up">Hey, I'm <span class="highlight">Vic</span></h1>
       <h2 class="animate-fade-up delay-1">Software Engineer.</h2>
       <p class="animate-fade-up delay-2">
         Results-driven developer with a solid foundation in Java, Kotlin, C#, and JavaScript. I

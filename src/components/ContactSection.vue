@@ -1,10 +1,12 @@
 <script setup lang="ts">
 import type { PropType } from 'vue'
+import resumePdf from '@/assets/pdf/resume.pdf'
 
 type SocialLink = {
   name: string
   url: string
 }
+
 
 defineProps({
   socialLinks: {
@@ -19,10 +21,10 @@ defineProps({
     <div class="container contact-content">
       <h2 class="section-title">Get In Touch</h2>
       <p>
-        I'm currently looking for new opportunities in software engineering. Feel free to reach out
+        Have any opportunities? Feel free to reach out
         via email or connect on LinkedIn.
       </p>
-      <a href="mailto:caio.marteli@proton.me" class="btn primary big-btn">Say Hello</a>
+      <a :href="resumePdf" class="btn primary big-btn" download>Download Resume</a>
 
       <div class="social-links">
         <a

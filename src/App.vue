@@ -26,14 +26,19 @@ const skills = ref([
   'SQL',
 ])
 
-// Mapped from Resume Projects
 const projects = ref([
+  {
+    title: 'SportsWall',
+    description:
+      'Worked as part of a team to create a live sports odds, customisable, extensible and modern website that is displayed on agencies around Australia.',
+    tech: ['Vue', 'Vite', 'AWS'],
+    link: 'https://sportswall.tabtouch.com.au/',
+  },
   {
     title: 'IMDEX Design Token System',
     description:
-      'Internship project involving the design and creation of a design token system seamlessly integrated with Figma. Led an Agile team and managed stakeholder reporting.',
+      'Industry project involving the design and creation of a design token system seamlessly integrated with Figma. Led an Agile team and managed stakeholder reporting.',
     tech: ['Angular', 'Express JS', 'Azure DevOps'],
-    link: '#',
   },
   {
     title: 'Android Photo Gallery',

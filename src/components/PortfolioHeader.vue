@@ -19,7 +19,7 @@ const scrollToSection = (id: string) => {
 <template>
   <header class="navbar">
     <div class="container nav-content">
-      <div class="logo" @click="scrollToSection('hero')">&lt;VMarteli /&gt;</div>
+      <div class="logo" @click="scrollToSection('hero')">&lt;VictorMarteli /&gt;</div>
 
       <button class="mobile-toggle" @click="toggleNav" aria-label="Toggle navigation">
         <span class="bar"></span>
