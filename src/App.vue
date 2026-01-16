@@ -16,6 +16,8 @@ const skills = ref([
   'C#',
   'Python',
   'JavaScript / TypeScript',
+  'React',
+  'Vue',
   'Angular',
   'Node.js',
   'Azure DevOps',

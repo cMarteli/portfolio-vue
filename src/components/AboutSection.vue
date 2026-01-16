@@ -5,20 +5,22 @@
       <div class="about-grid">
         <div class="about-text">
           <p>
-            I am a Software Engineer based in Western Australia with a Bachelor of Computing from
-            Curtin University. I have hands-on industry experience as a Full Stack Developer at
-            IMDEX Ltd, where I utilized Angular and Node.js to manage specialized hardware
-            inventory systems.
+            I am a Software Engineer currently working at Racing and Wagering Western Australia.
           </p>
           <p>
-            My background includes volunteering as a student mentor and working in network
-            diagnostics at Aussie Broadband. I am fluent in English and Portuguese, and passionate
+            My background includes working in the mining industry as a Full Stack Developer at
+            IMDEX Ltd, where I utilised Angular and Node.js to manage specialised hardware
+            inventory systems. I am passionate
             about applying my diverse skill set to challenging technical projects.
           </p>
         </div>
         <div class="about-visual">
-          <div class="profile-placeholder">
-            <span>VM</span>
+          <div class="profile-picture-container">
+            <img
+              src="@/assets/images/portrait.jpg"
+              alt="Portrait photo of Vic"
+              class="profile-picture"
+            />
           </div>
         </div>
       </div>
@@ -70,22 +72,22 @@
   align-items: center;
 }
 
-.profile-placeholder {
+.profile-picture-container {
   width: 100%;
   aspect-ratio: 1/1;
-  background-color: #334155;
   border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   border: 2px solid #38bdf8;
-  color: #94a3b8;
-  font-weight: bold;
   position: relative;
-  font-size: 2rem;
 }
 
-.profile-placeholder::after {
+.profile-picture {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.profile-picture-container::after {
   content: '';
   position: absolute;
   top: 15px;
@@ -102,7 +104,7 @@
   .about-grid {
     grid-template-columns: 1fr;
   }
-  .profile-placeholder {
+  .profile-picture-container {
     width: 80%;
     margin: 0 auto;
   }
